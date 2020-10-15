@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'headSection.dart';
+import 'mainPage.dart';
 
 class RecentPage extends StatefulWidget {
   @override
@@ -118,45 +119,51 @@ class _RecentPageState extends State<RecentPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8),
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  )),
-              child: Center(
-                child: ListTile(
-                  leading: ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Image.asset(
-                        'assets/avatar1.png',
-                        height: 50,
-                      )),
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 4.0),
-                    child: Text(
-                      'Unity DashBoard',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MainPage()));
+              },
+              child: Container(
+                height: 80,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    )),
+                child: Center(
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.asset(
+                          'assets/avatar1.png',
+                          height: 50,
+                        )),
+                    title: Padding(
+                      padding: const EdgeInsets.only(bottom: 4.0),
+                      child: Text(
+                        'Unity DashBoard',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
                     ),
-                  ),
-                  subtitle: Text(
-                    'Symbol Adjustment',
-                    style: TextStyle(color: Colors.white54, fontSize: 18),
-                  ),
-                  trailing: Text(
-                    'Sep 7',
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                          178,
-                          145,
-                          216,
-                          1,
-                        ),
-                        fontSize: 20),
+                    subtitle: Text(
+                      'Symbol Adjustment',
+                      style: TextStyle(color: Colors.white54, fontSize: 18),
+                    ),
+                    trailing: Text(
+                      'Sep 7',
+                      style: TextStyle(
+                          color: Color.fromRGBO(
+                            178,
+                            145,
+                            216,
+                            1,
+                          ),
+                          fontSize: 20),
+                    ),
                   ),
                 ),
               ),

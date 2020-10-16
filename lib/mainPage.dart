@@ -77,7 +77,7 @@ class _MainPageState extends State<MainPage> {
           ),
           Stack(children: [
             Container(
-              height: 300,
+              height: 240,
               child: ListView(
                 children: [
                   Center(

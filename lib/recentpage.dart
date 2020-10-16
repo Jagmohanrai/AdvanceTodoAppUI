@@ -1,3 +1,4 @@
+import 'package:advancetodoapp/UnityPage.dart';
 import 'package:flutter/material.dart';
 import 'headSection.dart';
 import 'mainPage.dart';
@@ -52,35 +53,56 @@ class _RecentPageState extends State<RecentPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: Container(
-              height: 80,
-              decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8),
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  )),
-              child: Center(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Color.fromRGBO(
-                      101,
-                      255,
-                      167,
-                      1,
-                    ),
-                    child: Icon(
-                      Icons.check,
-                      size: 35,
-                      color: Color.fromRGBO(4, 144, 77, 1),
-                    ),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => UnityPage(),
                   ),
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 4.0),
-                    child: Text(
-                      'Create Unity',
+                );
+              },
+              child: Container(
+                height: 80,
+                decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      topRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    )),
+                child: Center(
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Color.fromRGBO(
+                        101,
+                        255,
+                        167,
+                        1,
+                      ),
+                      child: Icon(
+                        Icons.check,
+                        size: 35,
+                        color: Color.fromRGBO(4, 144, 77, 1),
+                      ),
+                    ),
+                    title: Padding(
+                      padding: const EdgeInsets.only(bottom: 4.0),
+                      child: Text(
+                        'Create Unity',
+                        style: TextStyle(
+                            color: Color.fromRGBO(
+                              101,
+                              255,
+                              167,
+                              1,
+                            ),
+                            fontSize: 20),
+                      ),
+                    ),
+                    subtitle: Text(
+                      'GuideStyle',
                       style: TextStyle(
                           color: Color.fromRGBO(
                             101,
@@ -90,28 +112,17 @@ class _RecentPageState extends State<RecentPage> {
                           ),
                           fontSize: 20),
                     ),
-                  ),
-                  subtitle: Text(
-                    'GuideStyle',
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                          101,
-                          255,
-                          167,
-                          1,
-                        ),
-                        fontSize: 20),
-                  ),
-                  trailing: Text(
-                    'Tomorrow',
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                          101,
-                          255,
-                          167,
-                          1,
-                        ),
-                        fontSize: 20),
+                    trailing: Text(
+                      'Tomorrow',
+                      style: TextStyle(
+                          color: Color.fromRGBO(
+                            101,
+                            255,
+                            167,
+                            1,
+                          ),
+                          fontSize: 20),
+                    ),
                   ),
                 ),
               ),

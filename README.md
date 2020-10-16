@@ -1,16 +1,7 @@
 # advancetodoapp
 
-A new Flutter project.
+A Mind Blowing UI for an Advanced TODO Application
 
-## Getting Started
+![Screenshot](Screenshot_1602866396.png) ![Screenshot](Screenshot_1602866399.png) ![Screenshot](Screenshot_1602866408.png)
+ 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
